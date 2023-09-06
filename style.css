@@ -1,35 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-
-/* Nav-Bar */
-
-nav{
-    height: 100px;
-    display: flex;
-    background-color:#302D33 ;
-}
-
-#logo{
-    width: auto;
-    height: 150px;
-}
-
-.nav__container{
+.container {
     width: 100%;
     max-width: 1200px;
     padding: 0 16px;
@@ -39,11 +25,35 @@ nav{
     margin: 0 auto;
 }
 
-.nav__links{
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #F0EFED;
+}
+
+/* Nav-Bar */
+
+nav {
+    height: 100px;
+    display: flex;
+    background-color: #302D33;
+}
+
+#logo {
+    width: auto;
+    height: 150px;
+}
+
+
+.nav__links {
     display: flex;
 }
 
-.nav__link{
+.nav__link {
     margin-left: 24px;
     font-size: 18px;
     font-weight: 500;
@@ -51,45 +61,41 @@ nav{
     transition: all 500ms ease;
 }
 
-.nav__link:hover{
+.nav__link:hover {
     color: #DFB73C;
     text-decoration: underline;
 }
 
 /* Header */
 
-.header__container{
+.header__container {
     width: 100%;
     max-width: 1200px;
-    padding: 0 16px;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    height: 40vh;
+    height: 20vh;
 }
 
-#contact__form{
+#contact__form {
     display: flex;
 }
 
-.form__item{
+.form__item {
     width: 500px;
 }
 
-input{
+input {
     width: 100%;
     border-radius: 20px;
     padding: 16px;
 }
 
-.search__input{
+.search__input {
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
-button{
+button {
     margin-top: 0.5rem;
     position: absolute;
     margin-left: 26rem;
@@ -100,4 +106,54 @@ button{
     border: none;
     padding: 8px 12px;
     border-radius: 999px;
+}
+
+/* Movie area */
+
+.movie__img{
+    width: 200px;
+}
+
+.movies__container{
+    padding: 20px 20px 0px 20px;
+}
+
+.row{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.movie{
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    height: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0px -4px 72px -5px rgba(0,0,0,0.1);   
+    text-align: center;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+img{
+    transition: all 500ms ease;
+    border-radius: 20px;
+}
+
+img:hover{
+    transform: scale(0.95);
+}
+
+.movie h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.movie h2{
+    font-size: 18px;
 }

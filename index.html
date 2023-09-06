@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 <body>
     <section id="landing">
         <nav>
-            <div class="nav__container">
+            <div class="nav__container container">
                 <figure>
                     <img id="logo" src="./Assets/Logo.png" alt="">
                 </figure>
@@ -25,15 +26,32 @@
     </section>
 
     <header>
-        <div class="header__container">
-                <form id="contact__form">
-                    <div class="form__item">
-                        <input placeholder="Enter a movie..." class="search__input" name="movie-search" type="text">
-                    </div>
-                    <button>Search</button>
-                </form>
+        <div class="header__container container">
+            <form id="contact__form">
+                <div class="form__item">
+                    <input id="search__box" placeholder="Enter a movie..." class="search__input" name="movie-search" type="text" onchange="findMovies()">
+                </div>
+                <button onclick="search()">Search</button>
+            </form>
         </div>
     </header>
 
+    <section id="movies">
+        <div class="movies__container">
+            <div class="row">
+                <div class="wrap">
+                    <div class="movie">
+                        <figure>
+                            <img class="movie__img" src="./Assets/fast.jpg" alt="">
+                        </figure>
+                        <h1>Fast & Furious</h1>
+                        <h2>Year:2018</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
