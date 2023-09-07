@@ -29,9 +29,8 @@
         <div class="header__container container">
             <form id="contact__form">
                 <div class="form__item">
-                    <input id="search__box" placeholder="Enter a movie..." class="search__input" name="movie-search" type="text" onchange="findMovies()">
+                    <input onchange="findMovies(event)" id="search__box" placeholder="Enter a movie..." class="search__input" name="movie-search" type="text">
                 </div>
-                <button onclick="search()">Search</button>
             </form>
         </div>
     </header>

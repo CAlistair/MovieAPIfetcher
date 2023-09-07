@@ -1,6 +1,11 @@
 //https://www.omdbapi.com/?apikey=31b6f6e5&s=
 
-const searchbox = document.getElementById(" search__box");
+var term = document.getElementById("search__box")
+
+async function findMovies(event){
+    const term = event.target.value;
+    search(term)
+}
 
 async function search(term){
     const title = await fetch(`https://www.omdbapi.com/?apikey=31b6f6e5&s=${term}`)
@@ -9,6 +14,5 @@ async function search(term){
 }
 
 
-function findMovies(){
-    let term = (searchbox.value).trim();
-}
+
+search()
