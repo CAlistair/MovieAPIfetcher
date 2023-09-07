@@ -81,6 +81,7 @@ nav {
 
 .form__item {
     width: 500px;
+    display: flex;
 }
 
 input {

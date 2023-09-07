@@ -27,9 +27,14 @@
 
     <header>
         <div class="header__container container">
-            <form id="contact__form">
+            <form id="contact__form" onsubmit="findMovies(event); return false;">
                 <div class="form__item">
-                    <input onchange="findMovies(event)" id="search__box" placeholder="Enter a movie..." class="search__input" name="movie-search" type="text">
+                    <input id="search__box" 
+                    placeholder="Enter a movie..." 
+                    class="search__input" 
+                    name="movie-search" 
+                    type="text">
+                    <button>Search</button>
                 </div>
             </form>
         </div>
