@@ -1,6 +1,6 @@
 //https://www.omdbapi.com/?apikey=31b6f6e5&s=
 
-const term = document.getElementById("search-input").addEventListener("input", findMovies)
+const term = document.getElementById(`input-box`);
 
 async function findMovies(event){
     const term = event.target.value
@@ -12,4 +12,5 @@ async function search(term){
     const moviesData = await movies.json();
     console.log(moviesData)
 }
+
 
