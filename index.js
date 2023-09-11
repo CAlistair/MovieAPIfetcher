@@ -18,6 +18,11 @@ async function search(term){
         allMovies = moviesData.Search;
         displayMovies(allMovies.slice(0,6))
     }
+    else {
+        console.log("error")
+        movieListE1.innerHTML = 
+        "<h3>No movies found</h3>";
+    }
 }
 
 
