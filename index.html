@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Movies</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
 </head>
-
 <body>
     <section id="landing">
         <nav>
@@ -24,32 +22,48 @@
             </div>
         </nav>
     </section>
-
+<div class="wrapper">
     <header>
         <div class="header__container container">
-                <div class="form__item">
-                    <input id="input-box" class="search__input" placeholder="Enter movie title" type="text" onchange="findMovies(event); return false;">
-                    <button>Search</button>
-                </div>
+            <div class="form__item">
+                <input id="input-box" class="search__input" placeholder="Enter movie title" type="text"
+                    onchange="findMovies(event); return false;">
+                <button>Search</button>
+            </div>
         </div>
     </header>
 
     <section id="movies">
         <div class="movies__container">
             <div class="row">
-                <div class="wrap">
-                    <div class="movie">
-                        <figure>
-                            <img class="movie__img" src="./Assets/fast.jpg" alt="">
-                        </figure>
-                        <h1>Fast & Furious</h1>
-                        <h2>Year:2018</h2>
-                    </div>
+                <div class="movie__list">
+                    
                 </div>
             </div>
         </div>
     </section>
-
+    <script src="index.js"></script>
 </body>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="footer__box">
+                <div class="footer__title">
+                    <h3>Information</h3>
+                    <ul class="footer__detail">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </ul>
+                    <div class="footer__copy">
+                        <p>&copy 2023 Explore All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
 
 </html>
