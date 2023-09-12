@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Movies</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section id="landing">
@@ -28,7 +29,7 @@
             <div class="form__item">
                 <input id="input-box" class="search__input" placeholder="Enter movie title" type="text"
                     onchange="findMovies(event); return false;">
-                <button>Search</button>
+                <button id="search-button">Search</button>
             </div>
         </div>
     </header>
@@ -37,7 +38,9 @@
         <div class="movies__container">
             <div class="row">
                 <div class="movie__list">
-                    
+                    <div class="movie--wrap movies__loading movies__loading-none">
+                        <i class="fas fa-spinner movies__loading--spinner"></i>
+                      </div>
                 </div>
             </div>
         </div>

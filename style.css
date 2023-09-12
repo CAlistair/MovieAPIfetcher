@@ -184,6 +184,41 @@ img:hover{
     font-size: 18px;
 }
 
+/* Loading */
+
+.movies__loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies__loading--spinner{
+    font-size: 40px;
+    color: #DFB73C;
+}
+
+.movies__loading-none{
+    display: none;
+}
+  
+.movies__loading .movies__loading--spinner{
+    display: block;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
 /* Footer */
 
 footer{
