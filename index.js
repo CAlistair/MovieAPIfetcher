@@ -5,39 +5,57 @@ const movieWrapper = document.querySelector(" .movie--wrap")
 
 let allMovies = [""]
 
-async function findMovies(event){
+async function findMovies(event) {
     const term = event.target.value
     search(term)
 }
 
-async function search(term){
+function filterMovies(event) {
+    filteringMovies(event.target.value)
+}
+
+function filteringMovies(filter) {
+
+    if (filter === "NEW_TO_OLD") {
+        const filteredMovies = allMovies.sort((a, b) => (b.Year) - (a.Year));
+        allMovies = filteredMovies
+        displayMovies(allMovies.slice(0, 6))
+    }
+    else if (filter === "OLD_TO_NEW") {
+        const filteredMovies = allMovies.sort((a, b) => (a.Year) - (b.Year));
+        allMovies = filteredMovies
+        displayMovies(allMovies.slice(0, 6))
+    }
+}
+
+
+async function search(term) {
     movieWrapper.classList.remove(`movies__loading-none`);
     const movies = await fetch(`https://www.omdbapi.com/?s=${term}&apikey=31b6f6e5`);
     const moviesData = await movies.json();
-    
-    if (moviesData.Search){
+    if (moviesData.Search) {
         allMovies = moviesData.Search;
-        displayMovies(allMovies.slice(0,6))
+        displayMovies(allMovies.slice(0, 6))
     }
     else {
-        movieListE1.innerHTML = 
-        "<h3>No movies found</h3>";
+        movieListE1.innerHTML =
+            "<h3>No movies found</h3>";
         movieWrapper.classList.add(`movies__loading-none`);
     }
 }
 
 
-function displayMovies(movies){
+function displayMovies(movies) {
     setTimeout(() => {
         movieListE1.innerHTML = movies.map(movie =>
-     `<div class="movie">
+            `<div class="movie">
     <figure>
         <img class="movie__img" src="${movie.Poster}" alt="">
     </figure>
     <h1>${movie.Title}</h1>
     <h2>Year: ${movie.Year}</h2>
 </div>`
-).join("");
-movieWrapper.classList.add(`movies__loading-none`);
-},1000)
+        ).join("");
+        movieWrapper.classList.add(`movies__loading-none`);
+    }, 1000)
 }

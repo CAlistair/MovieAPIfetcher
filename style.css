@@ -130,6 +130,20 @@ button:hover{
     background-color: #AF8E2A;
 }
 
+/* Filter */ 
+
+#filter{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.filter__container{
+    margin-left: 20px;
+}
+
 /* Movie area */
 
 
@@ -201,9 +215,6 @@ img:hover{
     display: none;
 }
   
-.movies__loading .movies__loading--spinner{
-    display: block;
-}
 
 .fa-spinner {
     animation: rotate 600ms infinite linear;
